@@ -1,13 +1,21 @@
 import tailwindcss from '@tailwindcss/vite';
-import { defineNuxtConfig } from 'nuxt/config';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/eslint-module'],
-  devtools: { enabled: true },
-  css: ['~~/assets/css/main.css'],
-  compatibilityDate: '2025-07-15',
-  vite: {
-    plugins: [tailwindcss()]
-  }
+	devtools: { enabled: true },
+	modules: ['@nuxt/eslint', '@nuxtjs/google-fonts', '@pinia/nuxt', 'nuxt-jsonld'],
+	css: ['~/assets/css/main.css'],
+	vite: {
+		plugins: [tailwindcss()],
+	},
+	// nitro: {
+	// 	plugins: ['@/server/index'],
+	// },
+	googleFonts: {
+		families: {
+			Inter: [300, 400, 500, 600, 700],
+			Poppins: [500, 600, 700],
+		},
+		display: 'swap',
+	},
 });
