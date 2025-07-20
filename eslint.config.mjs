@@ -24,14 +24,7 @@ export default withNuxt(
 
 	{
 		files: ['**/*.ts', '**/*.vue', '**/*.js'],
-		ignores: [
-			'.nuxt/**/*',
-			'dist/**/*',
-			'.output/**/*',
-			'node_modules/**/*',
-			'**/*.d.ts',
-			'**/*.config.d.ts',
-		],
+		ignores: ['.nuxt/**/*', 'dist/**/*', '.output/**/*', 'node_modules/**/*', '**/*.d.ts', '**/*.config.d.ts'],
 		rules: {
 			'@typescript-eslint/no-explicit-any': 'warn',
 			'@typescript-eslint/no-unused-vars': 'off',
@@ -42,5 +35,5 @@ export default withNuxt(
 			'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 			'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		},
-	},
+	}
 );
